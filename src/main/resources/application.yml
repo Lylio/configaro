@@ -1,0 +1,27 @@
+# LOGGING (Spring Boot 2 requires logging.file.name)
+logging:
+  file:
+    name: /home/lylio/Documents/logs/spring-cloud-config-server.log
+
+# BANNER
+spring.banner.location: classpath:banner.txt
+
+# GITHUB CREDENTIALS
+git:
+  username:
+  password:
+
+# SPRING CLOUD CREDENTIALS
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/Lylio/config-repo
+          username: ${git.username}
+          password: ${git.password}
+
+
+# EMBEDDED SERVER CONFIGURATION
+server.port: 8888
