@@ -1,9 +1,9 @@
 # IDENTITY
 spring:
   application:
-    name: chinook-services
+    name: spring-config-cloud-server
 
   # SPRING CLOUD CONFIG URI
   cloud:
     config:
-      uri: https://chinook-services.herokuapp.com
+      uri:

@@ -1,8 +1,3 @@
-# LOGGING (Spring Boot 2 requires logging.file.name)
-logging:
-  file:
-    name: /home/lylio/Documents/logs/spring-cloud-config-server.log
-
 # BANNER
 spring.banner.location: classpath:banner.txt
 
