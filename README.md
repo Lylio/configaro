@@ -1,5 +1,5 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/spring-cloud-config.png?raw=true)
-![](https://github.com/Lylio/image-repo/blob/master/logos/git.png?raw=true)
+![](https://github.com/Lylio/image-repo/blob/master/logos/server.png?raw=true)
 # Spring Cloud Config Server
 ### Description
 A centralised configuration server for microservice and web application properties.
