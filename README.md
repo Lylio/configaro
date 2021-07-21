@@ -14,6 +14,6 @@ A Spring Cloud Config Server.
 ### Maven Launch
 1. `mvn clean install`
 2. `cd target/`
-3. `java -jar sconfigaro-0.0.1-SNAPSHOT.jar --git.username={username} --git.password={password}`
+3. `java -jar configaro-0.0.1-SNAPSHOT.jar --git.username={username} --git.password={password}`
 4. A different config file can be pulled with http://localhost:8888/{application name}/default
    e.g http://localhost:8888/chatty-services/default

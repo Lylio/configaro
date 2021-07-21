@@ -1,7 +1,7 @@
 # IDENTITY
 spring:
   application:
-    name: spring-config-cloud-server
+    name: configaro
 
   # SPRING CLOUD CONFIG URI
   cloud:

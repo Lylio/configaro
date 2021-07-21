@@ -19,7 +19,7 @@ spring:
 
 
 # EMBEDDED SERVER CONFIGURATION
-server.port:
+server.port: 8888
 
 management:
   endpoints:

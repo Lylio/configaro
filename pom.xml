@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lylechristine</groupId>
-    <artifactId>spring-cloud-config-server</artifactId>
+    <artifactId>configaro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-config-server</name>
-    <description>Demo project for Spring Boot</description>
+    <name>configaro</name>
+    <description>Sprong Cloud config server</description>
     <properties>
         <java.version>1.8</java.version>
         <azure.version>3.1.0</azure.version>
