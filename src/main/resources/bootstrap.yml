@@ -6,4 +6,4 @@ spring:
   # SPRING CLOUD CONFIG URI
   cloud:
     config:
-      uri: https://configaro.herokuapp.com/
+      uri: https://github.com/Lylio/config-repo
