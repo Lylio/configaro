@@ -1,0 +1,34 @@
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: configaro
+spec:
+  selector:
+    app: configaro
+  ports:
+    - protocol: "TCP"
+      port: 8888 # The port that the service is running on in the cluster
+      targetPort: 8080 # The port exposed by the service
+  type: LoadBalancer # type of the service. LoadBalancer indicates that our service will be external.
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configaro
+  labels:
+    app: configaro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: configaro
+  template:
+    metadata:
+      labels:
+        app: configaro
+    spec:
+      containers:
+        - name: configaro
+          image: lylio/configaro:latest
+          ports:
+            - containerPort: 8888 # The port that the container is running on in the cluster
