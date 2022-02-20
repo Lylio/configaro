@@ -34,12 +34,12 @@ node {
 	    	}
 	    }
 
-	    stage('Build Image') {
+	    stage('Build Docker Image') {
 	    	unstash 'jar'
 			app = docker.build image
 	    }
 
-	    stage('Push') {
+	    stage('Push to DockerHub') {
 	    	docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_id') {
 				app.push("${env.BUILD_NUMBER}")
 				app.push("latest")
