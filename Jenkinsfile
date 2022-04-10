@@ -14,18 +14,18 @@ node {
         	        sh './mvnw test'
         	    }
 
-        stage('SonarQube: Analysis') {
-                        withSonarQubeEnv('SonarQube_Server') {
-                            sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
-                    }
-                }
+        //stage('SonarQube: Analysis') {
+         //               withSonarQubeEnv('SonarQube_Server') {
+         //                   sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+         //           }
+          //      }
 
-        stage("SonarQube: Quality Gate") {
-                sleep(time:3,unit:"SECONDS")
-                timeout(time: 10, unit: 'MINUTES') {
-                waitForQualityGate abortPipeline: true
-                }
-        }
+    //    stage("SonarQube: Quality Gate") {
+       //         sleep(time:3,unit:"SECONDS")
+       //         timeout(time: 10, unit: 'MINUTES') {
+        //        waitForQualityGate abortPipeline: true
+         //       }
+       // }
 
 		stage('Build JAR') {
 	    	docker.image('maven:3.6.3-jdk-11').inside('-v /root/.m2:/root/.m2') {
